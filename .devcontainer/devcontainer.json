@@ -1,0 +1,31 @@
+{
+	"name": "Python 3 & PostgreSQL",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {
+			"ppa": true,
+			"version": "os-provided"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"charliermarsh.ruff",
+				"batisteo.vscode-django",
+				"shamanu4.django-intellisense",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"GitHub.vscode-pull-request-github"
+			],
+			"settings": {
+				"editor.defaultFormatter": "charliermarsh.ruff",
+				"ruff.formatOnSave": true,
+				"ruff.formatOnPaste": true
+			}
+		}
+	},
+	"postCreateCommand": "pip install --user -r requirements.txt"
+}
