@@ -4,4 +4,6 @@
 {% block content %}
     <h1>{{ page.title }}</h1>
     {{ page.body|richtext }}
+
+    <a href="{{ page.get_parent.url }}">Back to articles</a>
 {% endblock %}
